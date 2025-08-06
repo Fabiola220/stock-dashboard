@@ -32,34 +32,6 @@ ta
 
 pytz
 
-💻 Setup
-Clone the Repository
-
-bash
-Copy
-Edit
-git clone https://github.com/peterajhgraham/Real_Time_Stock_Price_Dashboard.git
-cd Real_Time_Stock_Price_Dashboard
-Install Dependencies
-
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Or install manually:
-
-bash
-Copy
-Edit
-pip install streamlit yfinance pandas plotly ta pytz
-Run the App
-
-bash
-Copy
-Edit
-streamlit run stock_dashboard.py
-The dashboard will launch automatically in your browser.
-
 🧑‍💻 How to Use
 Ticker: Enter a stock symbol (e.g., AAPL)
 
