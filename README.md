@@ -1,121 +1,101 @@
-# Real Time Stock Price Dashboard
+📈 Real-Time Stock Price Dashboard
+A full-stack stock market dashboard built with Python, Streamlit, and Plotly, providing real-time price tracking, customizable charts, and technical analysis tools. Monitor multiple tickers, apply indicators like SMA, EMA, and RSI, and view historical trends—all in one interactive app.
 
+Track and analyze stock prices in real time with an intuitive web-based dashboard.
 
-This project is a real-time full-stack stock price dashboard built using Python, Streamlit, Plotly, and various financial data analysis tools. The dashboard allows users to visualize stock prices, apply technical indicators such as SMA 20, EMA20, and RSI14, and monitor real-time prices of selected stocks.
+🔧 Features
+🔁 Live Stock Data – Real-time updates for selected tickers.
 
-*Enjoy a stock price dashboard that you can run right in your terminal*!
+📊 Interactive Charts – Candlestick and line chart options.
 
-https://github.com/user-attachments/assets/73e8ccaa-fba7-4288-9af2-376f0964c727
+📈 Technical Indicators – SMA 20, EMA 20, RSI 14 overlays.
 
-## Directory Structure
+🕰️ Historical Data – Analyze past performance across custom timeframes.
 
-```
-Real_Time_Stock_Price_Dashboard/
-├── stock_dashboard.py
-├── requirements.txt
-├── README.md
-├── LICENSE
-└── Example.png
-```
+📌 Multi-Ticker Support – View and track multiple stocks at once.
 
-## Features
+📥 Installation
+⚙️ Requirements
+Python 3.8+
 
-- **Real-Time Data**: Fetches and displays real-time stock data.
-- **Customizable Charts**: Supports candlestick and line charts.
-- **Technical Indicators**: Includes Simple Moving Average (SMA) and Exponential Moving Average (EMA).
-- **Historical Data**: View and analyze historical stock data.
-- **Multiple Tickers**: Monitor multiple stock symbols in real-time.
+Recommended libraries:
 
-## Installation
+streamlit
 
-### Prerequisites
+yfinance
 
-Ensure that you have Python 3.8 or higher installed on your machine. You'll also need to install the following Python libraries:
+pandas
 
-- `streamlit`
-- `yfinance`
-- `pandas`
-- `plotly`
-- `ta` (Technical Analysis library)
+plotly
 
-### Steps to Install
+ta
 
-1. **Clone the Repository**
+pytz
 
-   First, clone the repository to your local machine:
-   ```bash
-   git clone https://github.com/peterajhgraham/Real_Time_Stock_Price_Dashboard.git
-   cd Real_Time_Stock_Price_Dashboard
+💻 Setup
+Clone the Repository
 
-3. **Install the Required Packages**
+bash
+Copy
+Edit
+git clone https://github.com/peterajhgraham/Real_Time_Stock_Price_Dashboard.git
+cd Real_Time_Stock_Price_Dashboard
+Install Dependencies
 
-   Install the required Python packages using pip:
-   ```bash
-   pip3 install -r requirements.txt
-   ```
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Or install manually:
 
-   If you don't have a requirements.txt file, you can manually install the dependencies:
-   ```bash
-   pip3 install streamlit yfinance pandas plotly pytz ta
-   ```
+bash
+Copy
+Edit
+pip install streamlit yfinance pandas plotly ta pytz
+Run the App
 
-3. **Run the Application**
+bash
+Copy
+Edit
+streamlit run stock_dashboard.py
+The dashboard will launch automatically in your browser.
 
-   Once all the dependencies are installed, you can start the Streamlit app:
-   ```bash
-   python3 -m streamlit run stock_dashboard.py
-   ```
-   This command will launch the dashboard in your web browser!
+🧑‍💻 How to Use
+Ticker: Enter a stock symbol (e.g., AAPL)
 
-   *Example*:
+Time Period: Choose from 1d, 1wk, 1mo, 1y, etc.
 
-   <img src='Example.png'>
+Chart Type: Select either Candlestick or Line
 
-## Usage
-### Interface Overview
+Indicators: Add SMA 20, EMA 20, and RSI 14 overlays
 
-* **Ticker** - Enter the stock ticker symbol you want to analyze (e.g., AAPL for Apple Inc.)
+Update: Click the Update button to refresh the visualization
 
-* **Time Period** - Select the time period over which you want to view the stock data (e.g., 1d, 1wk, 1mo, 1y, etc.)
+Example:
+To monitor Apple Inc. (AAPL):
 
-* **Chart Type** - Choose between a candlestick chart and a line chart
+Ticker: AAPL
 
-* **Technical Indicators** - Select one or more technical indicators to apply to the chart
+Time: 1d
 
-### Real-Time Stock Prices
+Chart: Candlestick
 
-The sidebar displays the real-time prices for a predefined list of stock symbols (e.g., AAPL, GOOGL, AMZN, MSFT). These prices update automatically and show the percentage change from the opening price.
+Indicators: SMA 20, EMA 20, RSI 14
 
-### Customization
+For historical analysis:
 
-You can easily modify the list of stock symbols monitored in real-time by editing the stock_symbols list in the app.py file.
+Select a time period like 1y
 
-### Example Usage
+Choose Line chart
 
-1. Monitoring Apple Stock in Real-Time:
+Analyze data trends and indicator performance
 
-    * Enter `AAPL` in the ticker input
+⚠️ Known Issues
+Invalid Tickers: If the stock symbol is incorrect or not supported, a data error will be shown.
 
-    * Select `1d` for the time period
+Network Delays: Real-time updates rely on external APIs, which may experience lag.
 
-    * Choose the Candlestick chart type
+🛠️ Customization
+To change the default list of stocks being monitored:
 
-    * Select `SMA 20`, `EMA 20`, & `RSI 14` for technical indicators
-
-    * Click `Update` to visualize the data
-
-2. Viewing Historical Data:
-
-    * Select a longer time period (e.g., `1y`)
-
-    * Use the `Line` chart type for a smooth trend visualization.
-
-    * Analyze the historical data displayed below the chart.
-
-## Known Issues
-
-  * **Data Fetching Errors**: If no data is returned for a given ticker, an error message will be displayed. Ensure that the ticker symbol is correct and try again.
-
-
-
-
+Edit the stock_symbols list in app.py.
